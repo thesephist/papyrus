@@ -1,0 +1,111 @@
+/* CSS style copyright Linus Lee */
+
+html,body,div,iframe,p{margin:0;padding:0}h1,h2,h3{font-weight:normal}img{border:0}
+h1,h2,p{margin-top:0;display:block}
+body{font-family:"Lato",serif;background-color:#f3f3f3;-webkit-user-select:none;-moz-user-select:none;user-select:none;}
+#topbar{
+    position: fixed;
+    background: linear-gradient(to bottom, #f3f3f3, rgba(242,242,242,0.9) 72%, rgba(255,255,255,0) 100%);
+    height: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 5%;
+    z-index:3;
+}
+#topbar>a:first-child{float:left;position:relative;}
+#topbar>a>img{
+    height:40px;
+    width:40px;
+    margin:5px
+}
+#topbar>a{
+    display: block;
+    float: right;
+    text-decoration: none;
+    color: #999;
+    line-height: 50px;
+    margin: 0 15px;
+    font-family: "Helvetica Neue","Arial",sans-serif;
+    transition: color 0.3s;
+}
+#topbar>a:hover{
+    color:black;
+}
+#topbar>img{
+    float: right;
+    height: 40px;
+    margin: 5px;
+    width: 30px;
+    cursor: pointer;
+}
+#page{
+    margin: 100px auto 50px auto;
+    width: 55%;
+    max-width: 750px;
+    min-width: 686px;
+    font-size: 1.25em;
+    font-family: "Lora",serif;
+    line-height: 1.55em;
+    word-break: break-word;
+}
+h1{
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 25px;
+}
+h2{
+    text-align: center;
+    font-style: italic;
+    display: block;
+    margin-bottom: 30px;
+    width:100%;
+    position:relative;
+}
+#page>p{
+    display: block;
+    margin-bottom: 30px;
+}
+#page a{
+    color:black;
+}
+#page.contents a{
+    text-decoration:none;
+    display:block;
+    margin-top:5px;
+    margin-left:35px;
+}
+#page>hr{
+    margin-bottom:30px;
+}
+#footer{
+    color: #999;
+    font-style: italic;
+    text-align: center;
+}
+@media only screen and (max-width:700px){
+    #page{min-width:0;width:94%}
+    #topbar{padding:0}
+}
+@media only screen and (max-width:450px){
+    body{font-size:0.85em}
+}
+@media only screen and (max-width:350px){
+    #topbar>a[href="/about"]{display:none}
+}
+#topbar>a:first-child:hover::after{
+    content:"Go Home";
+    display:block;
+    position:absolute;
+    top:75%;
+    left:50%;
+    padding:5px;
+    line-height:26px;
+    background-color:rgba(0,0,0,0.4);
+    color:white;
+    border-radius:0 15px 15px 15px;
+    text-align:center;
+    width:90px;
+}
